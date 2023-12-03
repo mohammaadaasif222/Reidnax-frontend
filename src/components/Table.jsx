@@ -41,23 +41,21 @@ const Table = ({ entries }) => {
         <thead className="text-xs text-gray-700 uppercase dark:text-gray-400">
           <tr>
             <th scope="col" className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
-              Reigon
+            Name
             </th>
             <th scope="col" className="px-6 py-3">
-              Topic
+              Type
             </th>
             <th scope="col" className="px-6 py-3 bg-gray-50 dark:bg-gray-800">
-              Sector
+              Count
             </th>
             <th scope="col" className="px-6 py-3">
-              Published Date
+              Max Length
             </th>
             <th scope="col" className="px-6 py-3">
-              Intensity
+              Percentage
             </th>
-            <th scope="col" className="px-6 py-3">
-              Country
-            </th>
+           
           </tr>
         </thead>
         <tbody>
@@ -72,16 +70,16 @@ const Table = ({ entries }) => {
                       scope="row"
                       className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800"
                     >
-                      {entry.region}
+                      {entry.name}
                     </th>
 
-                    <td className="px-6 py-4">{entry.topic}</td>
+                    <td className="px-6 py-4">{entry.type}</td>
                     <td className="px-6 py-4 bg-gray-50 dark:bg-gray-800">
-                      {entry.sector}
+                      {entry.count}
                     </td>
-                    <td className="px-6 py-4">{entry.published}</td>
-                    <td className="px-6 py-4">{entry.intensity}</td>
-                    <td className="px-6 py-4">{entry.country}</td>
+                    <td className="px-6 py-4">{entry.max_str_length}</td>
+                    <td className="px-6 py-4">{entry.unique_percent}%</td>
+                    
                   </tr>
                 );
               })

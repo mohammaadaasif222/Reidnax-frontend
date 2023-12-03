@@ -12,7 +12,7 @@ const PieChartComponent = ({ entries }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    setData(entries?.slice(0, 7));
+    setData(entries?.slice(5,11));
   }, [entries]); // Update data when entries change
 
   const getRandomColor = () => {
@@ -41,8 +41,8 @@ const PieChartComponent = ({ entries }) => {
       <PieChart>
         <Pie
           data={data}
-          dataKey="likelihood"
-          nameKey="topic"
+          dataKey="unique_count"
+          nameKey="name"
           cx="50%"
           cy="50%"
           outerRadius={100}

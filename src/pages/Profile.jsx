@@ -5,6 +5,7 @@ import Dashboard from "../components/Dashboard";
 import ProfileLayout from "../components/ProfileLayout";
 import Table from "../components/Table";
 import BarChartComponent from "../components/BarChartComponent";
+import { data } from "autoprefixer";
 
 export default function Profile() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -15,9 +16,10 @@ export default function Profile() {
   };
   const fetchData = async () => {
     const response = await fetch(
-      "https://blackcoffer-alemeno.onrender.com/api/entries"
+      "https://dashboard-api-xzsk.onrender.com/api/entries"
     );
     const data = await response.json();
+    console.log(data);
     setEntries(data);
   };
 
@@ -26,7 +28,7 @@ export default function Profile() {
   }, [currentIndex]);
   return (
     <>
-      <Dashboard pageChange={changePage} entries={entries} />
+      <Dashboard pageChange={changePage}/>
       {currentIndex === 0 ? (
         <ProfileLayout entries={entries} show={true}>
           <BarChartComponent entries={entries} />
