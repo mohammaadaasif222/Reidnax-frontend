@@ -42,7 +42,7 @@ const Dashboard = ({ pageChange }) => {
 
       <aside
         id="logo-sidebar"
-        className={`fixed top-0 left-0 z-40 w-64 h-screen  rounded-lg transition-transform ${
+        className={`fixed top-0 left-0 z-40 w-64 h-screen shadow-md  rounded-lg transition-transform ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         } ${sidebarOpen && "sm:top-28 sm:mt-0"} ${
           typeof window !== "undefined" && window.innerWidth >= 633
