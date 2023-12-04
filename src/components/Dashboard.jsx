@@ -52,7 +52,7 @@ const Dashboard = ({ pageChange }) => {
         aria-label="Sidebar"
       >
         <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800">
-          <a href="#" className="flex items-center ps-2.5 mb-5 gap-2">
+          <a href="/" className="flex items-center ps-2.5 mb-5 gap-2">
             <img
               className="rounded-full h-10 w-10 object-cover"
               src='https://res.cloudinary.com/mae-com-in/image/upload/v1699458800/images_bx6zzs.png'

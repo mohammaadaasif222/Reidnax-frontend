@@ -12,29 +12,9 @@ const PieChartComponent = ({ entries }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    setData(entries?.slice(5,11));
-  }, [entries]); // Update data when entries change
+    setData(entries?.slice(5, 11));
+  }, [entries]); 
 
-  const getRandomColor = () => {
-    const letters = "F3F3F329ADB20766ADC5E898";
-    let color = "#";
-    for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-  };
-
-  const generateColorsMap = () => {
-    const colorsMap = {};
-    data?.forEach((entry) => {
-      if (!colorsMap[entry.topic]) {
-        colorsMap[entry.topic] = getRandomColor();
-      }
-    });
-    return colorsMap;
-  };
-
-  const colorsMap = generateColorsMap();
 
   return (
     <ResponsiveContainer width="100%" height={300}>
@@ -49,9 +29,12 @@ const PieChartComponent = ({ entries }) => {
           fill="#8884d8"
           label
         >
-          {data?.map((entry, index) => (
-            <Cell key={`${index+ new Date()}`} fill={colorsMap[entry.topic]} />
-          ))}
+          <Cell fill="#E5D283" />
+          <Cell fill="#64C2A6" />
+          <Cell fill="#AADEA7" />
+          <Cell fill="#E6F69D" />
+          <Cell fill="#61A3BA" />
+          <Cell fill="#FFC436" />
         </Pie>
         <Tooltip />
         <Legend />

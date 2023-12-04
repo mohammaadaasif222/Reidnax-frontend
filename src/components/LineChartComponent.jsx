@@ -12,6 +12,8 @@ const LineChartComponent = ({ entries }) => {
         <Tooltip />
         <Legend />
         <Line type="monotone" dataKey="avg_str_length" stroke="#8884d8" activeDot={{ r: 8 }} />
+        <Line type="monotone" dataKey="max_str_length" stroke="#96EFFF" activeDot={{ r: 8 }} />
+        <Line type="monotone" dataKey="min_str_length" stroke="#5FBDFF" activeDot={{ r: 8 }} />
       </LineChart>
     </ResponsiveContainer>
   );
